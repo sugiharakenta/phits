@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>444.7</string>
+	<string>444.42</string>
 	<key>AMApplicationVersion</key>
-	<string>2.8</string>
+	<string>2.9</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>-- Main routineon main(input)	set PhitsShell to "phits.sh"	-- Extract folder path &amp; file name	set Org_Demilit to text item delimiters of AppleScript	set text item delimiters of AppleScript to "/"	set FolderPath to text from text item 1 to text item -2 of input	set FileName to text item -1 of input	set FolderPath to FolderPath &amp; "'"	set FileName to "'" &amp; FileName	set text item delimiters of AppleScript to Org_Demilit	if application "iTerm" is not running then		tell application "iTerm"			activate			delay 0.5		end tell	end if		tell application "iTerm"		set newWindow to (create window with default profile)		tell current window			tell current session of newWindow				write text "cd" &amp; space &amp; FolderPath				delay 0.3				write text PhitsShell &amp; space &amp; FileName			end tell		end tell	end tellend mainon run {inputfile}	if inputfile is {} then		main(quoted form of POSIX path of (choose file))	else		main(quoted form of POSIX path of inputfile)	end ifend run</string>
+					<string>-- Main routineon main(input)	set PhitsShell to "phits.sh"	-- Extract folder path &amp; file name	set Org_Demilit to text item delimiters of AppleScript	set text item delimiters of AppleScript to "/"	set FolderPath to text from text item 1 to text item -2 of input	set FileName to text item -1 of input	set FolderPath to FolderPath &amp; "'"	set FileName to "'" &amp; FileName	set text item delimiters of AppleScript to Org_Demilit	if application "iTerm" is not running then		tell application "iTerm"			activate			delay 0.5		end tell	end if		tell application "iTerm"		set newWindow to (create window with default profile)		tell current window			tell current session of newWindow				write text "cd" &amp; space &amp; FolderPath				delay 0.3				write text PhitsShell &amp; space &amp; FileName			end tell		end tell	end tellend mainon run {inputfile}	if inputfile is {} then		main(quoted form of POSIX path of (choose file))	else		main(quoted form of POSIX path of inputfile)	end ifend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:316.000000</string>
+				<string>259.750000:315.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
